@@ -1,0 +1,12 @@
+.text{
+  display: flex;
+  text-transform: capitalize;
+  font-size: x-large;
+  
+}
+
+span{
+  padding-top: 0.5rem;
+  color: grey;
+}
+
