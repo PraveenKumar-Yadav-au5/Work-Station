@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
+import { connect } from "react-redux";
+
 
 class KeepListCamp extends Component {
     render() {
+        // console.log("Userdetails props", this.prop)
         return (
             <div >
-                <div className=" ">
+                <div>
                     <div className=" container text-secondary ">
                         <div className="row mt-5">
-                            {this.props.KeepData.map((keep, index) => {
+                            {this.props.keeplist && this.props.keeplist.map((keep, index) => {
                                 return (
                                     <div key={index} className="col-md-3">
                                         <div className="card mb-3 shadow">
@@ -20,7 +23,6 @@ class KeepListCamp extends Component {
                                             </div>
                                         </div>
                                     </div>
-
                                 )
                             })}
                         </div>
@@ -31,4 +33,11 @@ class KeepListCamp extends Component {
     }
 }
 
-export default KeepListCamp;
+const mapStateToProps = (state) =>{
+    return{
+        keeplists: state.keeplist
+    }
+}
+
+
+export default connect(mapStateToProps)(KeepListCamp) ;

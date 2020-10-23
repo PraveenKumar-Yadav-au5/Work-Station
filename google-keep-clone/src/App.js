@@ -6,10 +6,6 @@ import './App.css';
 
 class App extends React.Component {
 
-  state = {
-    keeplist: []
-  }
-
   addDataToList = (keep) => {
     let keeps = this.state.keeplist.slice();
     keeps.push(keep);
@@ -28,13 +24,13 @@ class App extends React.Component {
     return (
       <div>
         <nav className="navbar  text-warning border-bottom">
-          <a  style={{}} className=" text font-weight-bold ml-5">
+          <a  className=" text font-weight-bold ml-5">
             <img src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" /><span>keep note </span> </a>
             </nav>
 
-        < KeepCamp getNoteData={(keep) => this.addDataToList(keep)} />
+        < KeepCamp  />
 
-        < KeepListCamp KeepData={this.state.keeplist} remove={(index) => this.removeItem(index)} />
+        < KeepListCamp />
 
 
       </div>
