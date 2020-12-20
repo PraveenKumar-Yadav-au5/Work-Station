@@ -1,0 +1,14 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family:'Gill Sans';
+}
+
+span{
+  margin-left: 1.5rem;
+}
+
+.btn-dark{
+  opacity: .9;
+}
